@@ -1,0 +1,31 @@
+package Practice;
+import java.util.Scanner;
+public class FibonacciSeries 
+{
+	public static void main(String[] args) 
+	{
+		int num, i =1;
+		int firstnum = 0, secondnum = 1;
+		Scanner scan = new Scanner(System.in);
+		System.out.println("Enter a number: ");
+		num = scan.nextInt();
+		scan.close();
+		
+		while (i <= num)
+		{
+			System.out.print(firstnum + ", ");
+			int nextnum = firstnum + secondnum;
+			firstnum = secondnum;
+			secondnum = nextnum;
+			i ++;
+		}
+	}
+
+}
+
+
+Output:
+Enter a number: 
+12
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 
